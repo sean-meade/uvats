@@ -75,4 +75,30 @@ def vtZero(u, a, s):
     print(v, t)
 
 def vsZero(u, a, t):
-    
+    v = u + (a * t)
+
+    s = (u * t) + (0.5 * a * t**2)
+
+    print(v, s)
+
+def atZero(u, v, s):
+    a = (v**2 - u**2)/(2 * s)
+
+    t = (v - u)/a
+
+    print(a, t)
+
+def asZero(u, v, t):
+    s = 0.5 * (u + v) * t
+
+    a = (v**2 - u**2)/(2 * s)
+
+    print(a, s)
+
+def tsZero(u, v, a):
+    t = (v - u)/a
+
+    s = 0.5 * (u + v) * t
+
+    print(t, s)
+
