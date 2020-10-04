@@ -1,21 +1,25 @@
-"""import minusB
-"""
-"""import workings
-
-v = 100
-a = 50
-t = 70"""
-
-"""t1, t2 = minusB.minusB((0.5 * a), (-v), s)
-"""
-"""s = (v * t) - (0.5 * a * (t**2))
-
-u = (s/(0.5 *t)) - v
-
-print(u, v, a, t, s)"""
-
-"""workings.usZero(v, a, t)"""
-
 u = (input("initial velocity: "))
+v = (input("final velocity: "))
+a = (input("acceleration: "))
+t = (input("time: "))
+s = (input("distance: "))
 
-print(u)
+listOfInputs = [u, v, a, t, s]
+convertedInputs = []
+
+for i in listOfInputs:
+    if i == '':
+        convertedInputs.append(i)
+    else:
+        i = float(i)
+        convertedInputs.append(i)
+
+print(convertedInputs)
+
+u = convertedInputs[0]
+v = convertedInputs[1]
+a = convertedInputs[2]
+t = convertedInputs[3]
+s = convertedInputs[4]
+
+print(u, v, a, t, s)

@@ -24,65 +24,63 @@ a = (input("acceleration: "))
 t = (input("time: "))
 s = (input("distance: "))
 
-listOfInputs = [u, v, a, t, s]
-convertedInputs = []
-
-for i in listOfInputs:
-    if i == '':
-        i = 0
-        convertedInputs.append(i)
-    else:
-        i = float(i)
-        convertedInputs.append(i)
-
-u = convertedInputs[0]
-v = convertedInputs[1]
-a = convertedInputs[2]
-t = convertedInputs[3]
-s = convertedInputs[4]
-
-
 def solveuvats(u, v, a, t, s):
+    listOfInputs = [u, v, a, t, s]
+    convertedInputs = []
+
+    for i in listOfInputs:
+        if i == '':
+            convertedInputs.append(i)
+        else:
+            i = float(i)
+            convertedInputs.append(i)
+
+    u = convertedInputs[0]
+    v = convertedInputs[1]
+    a = convertedInputs[2]
+    t = convertedInputs[3]
+    s = convertedInputs[4]
+
     # When a, t and s are known.
-    if (u == 0 and v == 0):
+    if (u == '' and v == ''):
         nums = workings.uvZero(a, t, s)
         print(nums)
 
     # When a, t and v are known
-    elif (u == 0 and a == 0):
+    elif (u == '' and a == ''):
         nums = workings.uaZero(v, t, s)
         print(nums)    
     
     # When a, v, and s are known
-    elif (u == 0 and t == 0):
+    elif (u == '' and t == ''):
         nums = workings.utZero(a, v, s)
         print(nums)              
     
-    elif (u == 0 and s == 0):
+    elif (u == '' and s == ''):
         nums = workings.usZero(v, a, t)
         print(nums)
         
-    elif (v == 0 and a == 0):
+    elif (v == '' and a == ''):
         nums = workings.vaZero(t, s, u)
         print(nums) 
 
-    elif (v == 0 and t == 0):
+    elif (v == '' and t == ''):
         nums = workings.vtZero(u, a, s)
         print(nums)
     
-    elif (v == 0 and s == 0):
+    elif (v == '' and s == ''):
         nums = workings.vsZero(u, a, t)
         print(nums)
 
-    elif (a == 0 and t == 0):
+    elif (a == '' and t == ''):
         nums = workings.atZero(u, v, s)
         print(nums)
 
-    elif (a == 0 and s == 0):
+    elif (a == '' and s == ''):
         nums = workings.asZero(u, v, t)
         print(nums)
 
-    elif (t == 0 and s == 0):
+    elif (t == '' and s == ''):
         nums = workings.tsZero(u, v, a)
         print(nums)
 
