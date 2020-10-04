@@ -18,11 +18,28 @@ s = 0.5(u + v)t
 print("For the unknown values just press Enter.")
 time.sleep(2)
 
-u = float(input("initial velocity: "))
-v = float(input("final velocity: "))
-a = float(input("acceleration: "))
-t = float(input("time: "))
-s = float(input("distance: "))
+u = (input("initial velocity: "))
+v = (input("final velocity: "))
+a = (input("acceleration: "))
+t = (input("time: "))
+s = (input("distance: "))
+
+listOfInputs = [u, v, a, t, s]
+convertedInputs = []
+
+for i in listOfInputs:
+    if i == '':
+        i = 0
+        convertedInputs.append(i)
+    else:
+        i = float(i)
+        convertedInputs.append(i)
+
+u = convertedInputs[0]
+v = convertedInputs[1]
+a = convertedInputs[2]
+t = convertedInputs[3]
+s = convertedInputs[4]
 
 
 def solveuvats(u, v, a, t, s):

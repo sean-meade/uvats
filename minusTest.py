@@ -16,6 +16,6 @@ print(u, v, a, t, s)"""
 
 """workings.usZero(v, a, t)"""
 
-u = float(input("initial velocity: "))
+u = (input("initial velocity: "))
 
 print(u)
