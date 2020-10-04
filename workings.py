@@ -23,82 +23,81 @@ s = 990
 """
 
 def uvZero(a, t, s):
-    u = (s - (0.5 * a * (t ** 2)))/t
+    u = ((s - (0.5 * a * (t ** 2)))/t)
 
     v = math.sqrt( u ** 2 + 2 * a * s)
 
-    print(u, v)
+    return(u, v, a, t, s)
 
 def uaZero(v, t, s):
-    u = (s/(0.5 *t)) - v
+    u = ((s/(0.5 *t)) - v)
 
     a = (v**2 - u**2)/(2 * s)
 
-    print(u, a)
+    return(u, v, a, t, s)
 
 def utZero(a, v, s):
     t1, t2 = minusB.minusB((0.5 * a), (-v), s)
-    times = []
-    vels = []
+    t, u = 0, 0
     if t1 > 0:
-        u = (s - (0.5 * a * (t1 ** 2)))/t1
-        if u > 0:
-            vels.append(u)
-            times.append(t1)
-    if t2 > 0:
-        u = (s - (0.5 * a * (t2 ** 2)))/t2
-        if u > 0:
-            times.append(t2)
-            vels.append(u)
+        vel = (s - (0.5 * a * (t1 ** 2)))/t1
+        if vel > 0:
+            u = vel
+            t = t1
 
-    print(times, vels)
+    elif t2 > 0:
+        vel = (s - (0.5 * a * (t2 ** 2)))/t2
+        if vel > 0:
+            u = vel
+            t = t2
+    return(u, v, a, t, s)
+    
 
 def usZero(v, a, t):
-    s = (v * t) - (0.5 * a * (t**2))
+    u = v - (a * t)
 
-    u = (s/(0.5 *t)) - v
-
-    print(u, s)
+    s = (u * t) + (0.5 * a * t**2)
+    
+    return(u, v, a, t, s)
 
 def vaZero(t, s, u):
     v = (s/(0.5 * t)) - u
     
     a = (v**2 - u**2)/(2 * s)
 
-    print(v, a)
+    return(u, v, a, t, s)
 
 def vtZero(u, a, s):
     v = math.sqrt(u**2 + (2 * a * s))
 
     t = s/((0.5) * (u + v))
 
-    print(v, t)
+    return(u, v, a, t, s)
 
 def vsZero(u, a, t):
     v = u + (a * t)
 
     s = (u * t) + (0.5 * a * t**2)
 
-    print(v, s)
+    return(u, v, a, t, s)
 
 def atZero(u, v, s):
     a = (v**2 - u**2)/(2 * s)
 
     t = (v - u)/a
 
-    print(a, t)
+    return(u, v, a, t, s)
 
 def asZero(u, v, t):
     s = 0.5 * (u + v) * t
 
     a = (v**2 - u**2)/(2 * s)
 
-    print(a, s)
+    return(u, v, a, t, s)
 
 def tsZero(u, v, a):
     t = (v - u)/a
 
     s = 0.5 * (u + v) * t
 
-    print(t, s)
-
+    return(u, v, a, t, s)
