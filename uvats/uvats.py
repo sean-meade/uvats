@@ -1,4 +1,4 @@
-import workings
+from .workings import *
 import time
 
 
@@ -63,62 +63,62 @@ def solve_uvats(u, v, a, t, s):
 
     # When a, t and s are known.
     if (u == '' and v == ''):
-        nums = workings.uv_zero(a, t, s)
+        nums = uv_zero(a, t, s)
         print(nums)
         return nums
 
     # When v, t and s are known
     elif (u == '' and a == ''):
-        nums = workings.ua_zero(v, t, s)
+        nums = ua_zero(v, t, s)
         print(nums)
         return nums
     
     # When a, v, and s are known
     elif (u == '' and t == ''):
-        nums = workings.ut_zero(a, v, s)
+        nums = ut_zero(a, v, s)
         print(nums)
         return nums
     
     # When b, a, and t are known
     elif (u == '' and s == ''):
-        nums = workings.us_zero(v, a, t)
+        nums = us_zero(v, a, t)
         print(nums)
         return nums
     
     # When t, s, and u are known
     elif (v == '' and a == ''):
-        nums = workings.va_zero(t, s, u)
+        nums = va_zero(t, s, u)
         print(nums)
         return nums
 
     # When u, a, and s are known
     elif (v == '' and t == ''):
-        nums = workings.vt_zero(u, a, s)
+        nums = vt_zero(u, a, s)
         print(nums)
         return nums
     
     # When u, a, and t are known
     elif (v == '' and s == ''):
-        nums = workings.vs_zero(u, a, t)
+        nums = vs_zero(u, a, t)
         print(nums)
         return nums
 
     # When u, v, and s are known
     elif (a == '' and t == ''):
-        nums = workings.at_zero(u, v, s)
+        nums = at_zero(u, v, s)
         print(nums)
         return nums
 
     # When u, v, and t are known
     elif (a == '' and s == ''):
-        nums = workings.as_zero(u, v, t)
+        nums = as_zero(u, v, t)
         print(nums)
         return nums
 
     # When u, v, and a are known
     elif (t == '' and s == ''):
-        nums = workings.ts_zero(u, v, a)
+        nums = ts_zero(u, v, a)
         print(nums)
         return nums
 
-solve_uvats_with_user_input()
+# solve_uvats_with_user_input()

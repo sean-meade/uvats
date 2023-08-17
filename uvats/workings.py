@@ -1,5 +1,5 @@
 import math
-import minus_b
+from .minus_b import minus_b
 
 
 """
