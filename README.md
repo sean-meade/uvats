@@ -10,7 +10,7 @@ The following are known as the motion equations (or uvats equations):
 - s = vt - 1/2at<sup>2</sup>
 - s = 1/2(u + v)t
 
-Using these fomula I have built the enclosed scripts to solve for the unknown values.
+Using these formulae I have built the enclosed scripts to solve for the unknown values.
 
 *Must knows:*
 - There must be 3 knowns in order to solve for the other 2.
@@ -18,9 +18,21 @@ Using these fomula I have built the enclosed scripts to solve for the unknown va
 - If you find any problems with it please let me know and I'll look at fixing it.
 
 The meaning of uvats:
-- u = inital velocity
+- u = initial velocity
 - v = final velocity
-- a = acceleration (or decceleration, it will come up as a negative value)
+- a = acceleration (or deceleration, it will come up as a negative value)
 - t = time taken
-- s = displacement (sometimes refered to as disntance)
+- s = displacement (sometimes referred to as distance)
 
+# The minusB Formula for Quadratic Equations
+
+I used it so much in secondary school that I thought creating a function that could help you solve a quadratic equation would be fun.
+
+Quadratic Equation:
+When $a \ne 0$, there are two solutions to $(ax^2 + bx + c = 0)$ and they are 
+
+$$ x = {-b \pm \sqrt{b^2-4ac} \over 2a} $$
+
+using the method:
+
+positiveRoot, negativeRoot = minusB(a, b, c)
