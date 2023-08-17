@@ -63,61 +63,61 @@ def solve_uvats(u, v, a, t, s):
 
     # When a, t and s are known.
     if (u == '' and v == ''):
-        nums = workings.uvZero(a, t, s)
+        nums = workings.uv_zero(a, t, s)
         print(nums)
         return nums
 
     # When v, t and s are known
     elif (u == '' and a == ''):
-        nums = workings.uaZero(v, t, s)
+        nums = workings.ua_zero(v, t, s)
         print(nums)
         return nums
     
     # When a, v, and s are known
     elif (u == '' and t == ''):
-        nums = workings.utZero(a, v, s)
+        nums = workings.ut_zero(a, v, s)
         print(nums)
         return nums
     
     # When b, a, and t are known
     elif (u == '' and s == ''):
-        nums = workings.usZero(v, a, t)
+        nums = workings.us_zero(v, a, t)
         print(nums)
         return nums
     
     # When t, s, and u are known
     elif (v == '' and a == ''):
-        nums = workings.vaZero(t, s, u)
+        nums = workings.va_zero(t, s, u)
         print(nums)
         return nums
 
     # When u, a, and s are known
     elif (v == '' and t == ''):
-        nums = workings.vtZero(u, a, s)
+        nums = workings.vt_zero(u, a, s)
         print(nums)
         return nums
     
     # When u, a, and t are known
     elif (v == '' and s == ''):
-        nums = workings.vsZero(u, a, t)
+        nums = workings.vs_zero(u, a, t)
         print(nums)
         return nums
 
     # When u, v, and s are known
     elif (a == '' and t == ''):
-        nums = workings.atZero(u, v, s)
+        nums = workings.at_zero(u, v, s)
         print(nums)
         return nums
 
     # When u, v, and t are known
     elif (a == '' and s == ''):
-        nums = workings.asZero(u, v, t)
+        nums = workings.as_zero(u, v, t)
         print(nums)
         return nums
 
     # When u, v, and a are known
     elif (t == '' and s == ''):
-        nums = workings.tsZero(u, v, a)
+        nums = workings.ts_zero(u, v, a)
         print(nums)
         return nums
 
